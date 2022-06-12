@@ -15,135 +15,135 @@ import static org.junit.jupiter.api.Assertions.*;
  *
  * @author profesor
  */
-public class CirculoTest {
+public class AritoTest {
     
-    public CirculoTest() {
+    public AritoTest() {
     }
     
     /**
-     * Test of establecerX method, of class Circulo.
+     * Test of setCoordenadaX method, of class Arito.
      */
     @Test
     public void testEstablecerX() {
         System.out.println("establecerX");
         int valorX = 0;
-        Circulo instance = new Circulo();
-        instance.establecerX(valorX);
+        Arito instance = new Arito();
+        instance.setCoordenadaX(valorX);
     }
 
     /**
-     * Test of obterX method, of class Circulo.
+     * Test of getCoordenadaX method, of class Arito.
      */
     @Test
     public void testObterX() {
         System.out.println("obterX");
-        Circulo instance = new Circulo(0,0,0.1);
+        Arito instance = new Arito(0,0,0.1);
         int expResult = 0;
-        int result = instance.obterX();
+        int result = instance.getCoordenadaX();
         assertEquals(expResult, result);
     }
 
     /**
-     * Test of establecerY method, of class Circulo.
+     * Test of setCoordenadaY method, of class Arito.
      */
     @Test
     public void testEstablecerY() {
         System.out.println("establecerY");
         int valorY = 0;
-        Circulo instance = new Circulo();
-        instance.establecerY(valorY);
+        Arito instance = new Arito();
+        instance.setCoordenadaY(valorY);
     }
 
     /**
-     * Test of obterY method, of class Circulo.
+     * Test of getCoordenadaY method, of class Arito.
      */
     @Test
     public void testObterY() {
         System.out.println("obterY");
-        Circulo instance = new Circulo(0,0,0.1);
+        Arito instance = new Arito(0,0,0.1);
         int expResult = 0;
-        int result = instance.obterY();
+        int result = instance.getCoordenadaY();
         assertEquals(expResult, result);
     }
 
     /**
-     * Test of establecerRadio method, of class Circulo.
+     * Test of setRadio method, of class Arito.
      */
     @Test
     public void testEstablecerRadio() {
         System.out.println("establecerRadio");
-        Circulo instance = new Circulo();
-        instance.establecerRadio(0.0);
-        instance.establecerRadio(0.1);
-        instance.establecerRadio(-0.1);
+        Arito instance = new Arito();
+        instance.setRadio(0.0);
+        instance.setRadio(0.1);
+        instance.setRadio(-0.1);
     }
 
     /**
-     * Test of obterRadio method, of class Circulo.
+     * Test of getRadio method, of class Arito.
      */
     @Test
     public void testObterRadio() {
         System.out.println("obterRadio");
-        Circulo instance = new Circulo(0,0,0.1);
-        double result = instance.obterRadio();
+        Arito instance = new Arito(0,0,0.1);
+        double result = instance.getRadio();
         assertEquals(0.1, result,0);
 
-        instance.establecerRadio(0.1);
-        result= instance.obterRadio();
+        instance.setRadio(0.1);
+        result= instance.getRadio();
         assertEquals(0.1, result,0);
 
-        instance.establecerRadio(-0.1);
-        result= instance.obterRadio();
+        instance.setRadio(-0.1);
+        result= instance.getRadio();
         assertEquals(0.0, result,0);
     }
 
     /**
-     * Test of obterDiametro method, of class Circulo.
+     * Test of obterDiametro method, of class Arito.
      */
     @Test
     public void testObterDiametro() {
         System.out.println("obterDiametro");
-        Circulo instance = new Circulo(0,0,0.1);
+        Arito instance = new Arito(0,0,0.1);
         double result = instance.obterDiametro();
         assertEquals(0.2, result,0);
     }
 
     /**
-     * Test of obterCircunferencia method, of class Circulo.
+     * Test of obterCircunferencia method, of class Arito.
      */
     @Test
     public void testObterCircunferencia() {
         System.out.println("obterCircunferencia");
-        Circulo instance = new Circulo(0,0,0.1);
+        Arito instance = new Arito(0,0,0.1);
         double expResult = 0.6283185;
         double result = instance.obterCircunferencia();
         assertEquals(expResult, result,1e-6);
     }
 
     /**
-     * Test of obterArea method, of class Circulo.
+     * Test of obterSuperficie method, of class Arito.
      */
     @Test
-    public void testObterArea() {
+    public void testObterSuperficie() {
         System.out.println("obterArea");
-        Circulo instance = new Circulo(0,0,0.1);
+        Arito instance = new Arito(0,0,0.1);
         double expResult = 0.0314159;
-        double result = instance.obterArea();
+        double result = instance.obterSuperficie();
         assertEquals(expResult, result,1e-6);
     }
 
     /**
-     * Test of trasladarCentro method, of class Circulo.
+     * Test of trasladarCentro method, of class Arito.
      */
     @Test
     public void testTrasladarCentro() {
         System.out.println("trasladarCentro");
-        Circulo instance = new Circulo();
-        int resultx=instance.obterX();
-        int resulty=instance.obterY();
+        Arito instance = new Arito();
+        int resultx=instance.getCoordenadaX();
+        int resulty=instance.getCoordenadaY();
         instance.trasladarCentro(5, 6);
-        int resultnx = instance.obterX();
-        int resultny = instance.obterY();
+        int resultnx = instance.getCoordenadaX();
+        int resultny = instance.getCoordenadaY();
         assertEquals(resultx+5, resultnx);
         assertEquals(resulty+6, resultny);
     }
